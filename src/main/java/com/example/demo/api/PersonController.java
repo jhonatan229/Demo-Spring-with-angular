@@ -3,6 +3,7 @@ package com.example.demo.api;
 import com.example.demo.model.Person;
 import com.example.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.*;
 
 import java.nio.file.Path;
@@ -19,7 +20,7 @@ public class PersonController {
         this.personService = personService;
     }
     @PostMapping
-    public void addPerson(@RequestBody Person person){
+    public void addPerson(@NonNull @RequestBody Person person){
         personService.addPerson(person);
     }
     @GetMapping
@@ -27,8 +28,16 @@ public class PersonController {
         return personService.selectAllPeople();
     }
     @GetMapping (path = "{id}")
-    public Person SelectPersonById(@PathVariable("id") UUID id){
+    public Person SelectPersonById(@PathVariable("id") UUID id) {
         return personService.SelectPersonById(id)
-                .orElse( null );
+                .orElse(null);
+    }
+    @DeleteMapping(path = "{id}")
+    public int DeletePersonById(@PathVariable("id") UUID id){
+        return personService.deletePersonById(id);
+    }
+    @PutMapping(path = "{id}")
+    public int updatePersonByID(@PathVariable UUID id, @NonNull @RequestBody Person person){
+        return personService.updatePersonByID(id, person);
     }
 }
