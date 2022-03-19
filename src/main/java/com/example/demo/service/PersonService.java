@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@Service
+@Service("fakeService")
 public class PersonService {
 
     private final PersonDao personDao;

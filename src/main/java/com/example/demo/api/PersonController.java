@@ -1,12 +1,14 @@
 package com.example.demo.api;
 
+import com.example.demo.model.Client;
 import com.example.demo.model.Person;
+import com.example.demo.service.ClientService;
 import com.example.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.file.Path;
 import java.util.List;
 import java.util.UUID;
 
@@ -16,7 +18,7 @@ public class PersonController {
     private final PersonService personService;
 
     @Autowired
-    public PersonController(PersonService personService) {
+    public PersonController(@Qualifier("fakeService") PersonService personService) {
         this.personService = personService;
     }
     @PostMapping
