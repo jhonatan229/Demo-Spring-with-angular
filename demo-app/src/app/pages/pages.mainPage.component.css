@@ -46,7 +46,7 @@
 }
 
 #choices{
-	height: 20%;
+	height: 10%;
 	width: 100%;
 	display: flex;
 	background-color: rgb(98, 98, 253);
@@ -55,9 +55,17 @@
 
 #left-choice, #right-choice{
 	width: 50%;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+#left-choice{
+	border-radius: 8px 1px 1px 1px;
+}
+
+#right-choice{
+	border-radius: 1px 8px 1px 1px;
 }
 
 .button-choice{
@@ -67,9 +75,13 @@
 	cursor: pointer;
 	border: none;
 	background-color: rgba(243, 78, 111, 0.705);
-	border-radius: 5px;
 }
 
 .button-choice:hover{
 	opacity: 0.8;
+}
+
+#context{
+	height: 90%;
+	width: 100%;
 }

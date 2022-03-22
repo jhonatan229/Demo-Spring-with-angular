@@ -1,0 +1,64 @@
+#spaceRegister{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#title{
+	height: 20%;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+#bodyForm{
+	height: 45%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.formText{
+	width: 50%;
+}
+
+.submitfields{
+	width: 50%;
+	height: 12%;
+	border: 1px solid rgba(87, 86, 86, 0.438);
+	border-radius: 2.5px;
+	padding-left: 7px;
+}
+
+.submitfields:focus{
+	outline: none;
+}
+
+#submitPlace{
+	height: 35%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+
+#submitButton{
+	height: 18%;
+	width: 50%;
+	font-weight: 600;
+	border-radius: 2.5px;
+	cursor: pointer;
+	border: 1px solid rgba(87, 86, 86, 0.438);
+}
+
+#submitButton:hover, .submitfields:hover{
+	box-shadow: 1px 1px 5px rgb(182, 182, 182);
+}

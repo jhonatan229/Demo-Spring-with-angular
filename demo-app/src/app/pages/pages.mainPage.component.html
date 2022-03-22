@@ -4,23 +4,18 @@
 			<img src="../../assets/logo.png" alt="logo do site escrito facility task">
 		</div>
 		<div id="text-description">
-			<p>Bem vindo ao Facility Task, um novo jeito de gerenciar suas micro empresa, tendo acesso a dados rapidamente sobre suas vendas, tudo na palma da sua mão.</p>
+			<p>Bem vindo ao Facility Task, um novo jeito de gerenciar suas micro empresa, tendo acesso a dados
+				rapidamente sobre suas vendas, tudo na palma da sua mão.</p>
 		</div>
 	</div>
 	<div id="right-side">
 		<div id="space-forms">
 			<div id="choices">
-				<div id="left-choice">
-					<button (click)="changeView('register')" class="button-choice">Cadastre-se</button>
-				</div>
-				<div id="right-choice">
-					<button (click)="changeView('login')" class="button-choice">Entrar</button>
-				</div>
+				<button id="left-choice" (click)="changeView('register')" class="button-choice">Cadastre-se</button>
+				<button id="right-choice" (click)="changeView('login')" class="button-choice">Entrar</button>
 			</div>
 			<div id="context">
-				<div *ngIf="switch == 'register'">
-					heloy true
-				</div>
+				<app-form-register *ngIf="switch == 'register'"></app-form-register>
 				<div *ngIf="switch == 'login'">
 					helo false
 				</div>
@@ -30,4 +25,4 @@
 			</div>
 		</div>
 	</div>
-</div >
+</div>
