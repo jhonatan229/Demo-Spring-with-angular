@@ -2,6 +2,9 @@ body {
 	height: 100vh;
 	margin: 0;
   }
+  html{
+	  font-family: 'Roboto';
+  }
   
   app-root {
 	display: block;

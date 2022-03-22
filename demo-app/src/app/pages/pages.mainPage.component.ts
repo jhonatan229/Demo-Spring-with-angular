@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'main-page',
-  templateUrl: './pages.mainPage.component.html',
-  styleUrls: ['./pages.mainPage.component.css']
+	selector: 'main-page',
+	templateUrl: './pages.mainPage.component.html',
+	styleUrls: ['./pages.mainPage.component.css']
 })
 export class MainPage {
-  title = 'demo main page';
+	title = 'demo main page';
+	switch = "register";
+
+	changeView(register:string){
+		this.switch = register;
+	}
 }

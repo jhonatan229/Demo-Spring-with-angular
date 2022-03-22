@@ -11,10 +11,18 @@
 		<div id="space-forms">
 			<div id="choices">
 				<div id="left-choice">
-					<button class="button-choice">Cadastre-se</button>
+					<button (click)="changeView('register')" class="button-choice">Cadastre-se</button>
 				</div>
 				<div id="right-choice">
-					<button class="button-choice">Entrar</button>
+					<button (click)="changeView('login')" class="button-choice">Entrar</button>
+				</div>
+			</div>
+			<div id="context">
+				<div *ngIf="switch == 'register'">
+					heloy true
+				</div>
+				<div *ngIf="switch == 'login'">
+					helo false
 				</div>
 			</div>
 			<div>
